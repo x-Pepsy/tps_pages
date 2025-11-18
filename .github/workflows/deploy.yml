@@ -35,21 +35,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Build with Next.js
-        run: npm run build
+      - name: Build with Next.js (without Turbopack)
+        run: NEXT_PRIVATE_STANDALONE=true npm run build
+        env:
+          NODE_ENV: production
       
-      - name: List build output (debug)
+      - name: Verify out directory
         run: |
-          echo "Listing root directory:"
-          ls -la
           echo "Checking for out directory:"
           if [ -d "out" ]; then
-            echo "out directory exists"
+            echo "✓ out directory exists"
             ls -la out/
           else
-            echo "out directory does not exist"
-            echo "Looking for .next directory:"
-            ls -la .next/ || echo ".next not found"
+            echo "✗ out directory does not exist"
+            exit 1
           fi
       
       - name: Upload artifact
