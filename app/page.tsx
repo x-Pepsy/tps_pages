@@ -959,7 +959,7 @@ export default function Home() {
             <Card className="relative overflow-hidden border-2 border-primary/20 bg-gradient-to-br from-primary/10 via-background to-accent/10">
               <CardContent className="relative p-6 sm:p-8 md:p-12 text-center">
                 <motion.img
-                  src="/TPS.svg"
+                  src="/tps_pages/TPS.svg"
                   alt="The Perfect Sound Logo"
                   className="mx-auto mb-4 sm:mb-6 h-16 w-16 sm:h-20 sm:w-20"
                   animate={{
