@@ -134,7 +134,7 @@ export default function Home() {
             transition={{ type: "spring", stiffness: 400 }}
           >
             <motion.img
-              src="/TPS.svg"
+              src="/tps_pages/TPS.svg"
               alt="The Perfect Sound Logo"
               className="h-12 w-12"
               animate={{
