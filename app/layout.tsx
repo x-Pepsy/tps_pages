@@ -10,8 +10,12 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://x-Pepsy.github.io/tps-pages'), // Update with your actual URL
+  metadataBase: new URL(siteUrl),
   title: {
     default: "The Perfect Sound - Professional Audio Equalizer for Android",
     template: "%s | The Perfect Sound"
@@ -48,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://x-Pepsy.github.io/tps-pages",
+    url: siteUrl,
     title: "The Perfect Sound - Professional Audio Equalizer for Android",
     description: "5 professional equalizers, AutoEQ profiles for 1000+ headphones, and advanced audio controls. Transform your Android audio experience.",
     siteName: "The Perfect Sound",
@@ -81,21 +85,21 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/tps_pages/favicon.ico", sizes: "48x48", type: "image/x-icon" },
-      { url: "/tps_pages/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/tps_pages/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
     apple: [
-      { url: "/tps_pages/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
     other: [
-      { url: "/tps_pages/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/tps_pages/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
     ],
   },
-  manifest: "/tps_pages/site.webmanifest",
+  manifest: "/site.webmanifest",
   alternates: {
-    canonical: "https://x-Pepsy.github.io/tps-pages",
+    canonical: siteUrl,
   },
   category: "technology",
 };

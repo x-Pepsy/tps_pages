@@ -20,7 +20,7 @@ export function Header() {
                         transition={{ type: "spring", stiffness: 400 }}
                     >
                         <motion.img
-                            src="/tps_pages/TPS.svg"
+                            src="/TPS.svg"
                             alt="The Perfect Sound Logo"
                             className="h-12 w-12"
                             animate={{

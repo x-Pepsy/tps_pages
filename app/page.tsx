@@ -8,8 +8,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { motion, useScroll, useTransform, useInView, useMotionValue, useSpring } from "framer-motion"
-import { useRef, useState } from "react"
+import { motion, useScroll, useTransform, useInView } from "framer-motion"
+import { useRef } from "react"
 
 // Animation variants
 const fadeInUp = {
@@ -49,24 +49,9 @@ const staggerContainer = {
   }
 }
 
-// 3D Tilt effect for cards
-const cardHover = {
-  rest: { scale: 1, rotateX: 0, rotateY: 0 },
-  hover: {
-    scale: 1.05,
-    transition: {
-      type: "spring" as const,
-      stiffness: 300,
-      damping: 20
-    }
-  }
-}
-
-// Magnetic button effect
-const magneticVariants = {
-  rest: { scale: 1 },
-  hover: { scale: 1.1 },
-  tap: { scale: 0.95 }
+const hashToUnit = (n: number) => {
+  const x = Math.sin(n) * 10000
+  return x - Math.floor(x)
 }
 
 const FloatingParticle = ({ delay = 0 }: { delay?: number }) => (
@@ -77,13 +62,13 @@ const FloatingParticle = ({ delay = 0 }: { delay?: number }) => (
       opacity: [0, 1, 0],
       scale: [0, 1.5, 0],
       y: [-100, -600],
-      x: [0, Math.random() * 200 - 100]
+      x: [0, hashToUnit(delay + 1) * 200 - 100]
     }}
     transition={{
       duration: 4,
       delay,
       repeat: Infinity,
-      repeatDelay: Math.random() * 3,
+      repeatDelay: hashToUnit(delay + 2) * 3,
       ease: "easeInOut"
     }}
   />
@@ -705,7 +690,7 @@ export default function Home() {
                         </CardHeader>
                         <CardContent>
                           <p className="text-sm text-muted-foreground">
-                            Increases perceived volume without distortion, making audio "louder" intelligently.
+                            Increases perceived volume without distortion, making audio &quot;louder&quot; intelligently.
                           </p>
                           <div className="mt-3 rounded-lg bg-muted/50 p-3">
                             <p className="text-xs font-medium">Range: 0 dB to +10 dB</p>
@@ -907,7 +892,7 @@ export default function Home() {
                   <AccordionTrigger className="text-left text-sm sm:text-base">Which Android devices are supported?</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground text-sm sm:text-base">
                     The Perfect Sound requires Android 9.0 (Pie) or higher. Note: some manufacturers limit audio APIs,
-                    so not all devices support all effects. You can check support in the app's "Info" section.
+                    so not all devices support all effects. You can check support in the app&apos;s &quot;Info&quot; section.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -925,7 +910,7 @@ export default function Home() {
               <Card className="relative overflow-hidden border-2 border-primary/20 bg-gradient-to-br from-primary/10 via-background to-accent/10">
                 <CardContent className="relative p-6 sm:p-8 md:p-12 text-center">
                   <motion.img
-                    src="/tps_pages/TPS.svg"
+                    src="/TPS.svg"
                     alt="The Perfect Sound Logo"
                     className="mx-auto mb-4 sm:mb-6 h-16 w-16 sm:h-20 sm:w-20"
                     animate={{

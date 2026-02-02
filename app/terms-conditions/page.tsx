@@ -29,7 +29,7 @@ export default function TermsConditionsPage() {
                     <section>
                         <h2 className="text-2xl font-semibold mt-8 mb-4">1. ACCEPTANCE OF TERMS</h2>
                         <p>
-                            By downloading, installing, or using The Perfect Sound ("the app"), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use the app.
+                            By downloading, installing, or using The Perfect Sound (&quot;the app&quot;), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use the app.
                         </p>
                     </section>
 
@@ -109,7 +109,7 @@ export default function TermsConditionsPage() {
                     <section>
                         <h2 className="text-2xl font-semibold mt-8 mb-4">8. BATTERY USAGE</h2>
                         <p>
-                            The app may request to ignore battery optimization to maintain audio processing quality. This may affect battery life. You can modify these settings in your device's battery optimization settings.
+                            The app may request to ignore battery optimization to maintain audio processing quality. This may affect battery life. You can modify these settings in your device&apos;s battery optimization settings.
                         </p>
                     </section>
 
@@ -122,7 +122,7 @@ export default function TermsConditionsPage() {
 
                     <section>
                         <h2 className="text-2xl font-semibold mt-8 mb-4">10. DISCLAIMER OF WARRANTIES</h2>
-                        <p>The app is provided "AS IS" without warranties of any kind. We do not guarantee:</p>
+                        <p>The app is provided &quot;AS IS&quot; without warranties of any kind. We do not guarantee:</p>
                         <ul className="list-disc pl-6 space-y-2">
                             <li>Error-free operation</li>
                             <li>Continuous availability</li>
@@ -149,7 +149,7 @@ export default function TermsConditionsPage() {
                         <p>You agree to:</p>
                         <ul className="list-disc pl-6 space-y-2">
                             <li>Use the app responsibly and at safe volume levels</li>
-                            <li>Maintain your device's battery and connectivity</li>
+                            <li>Maintain your device&apos;s battery and connectivity</li>
                             <li>Accept app updates when available</li>
                             <li>Comply with applicable laws and regulations</li>
                             <li>Not jailbreak or root your device, which may compromise security</li>

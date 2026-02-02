@@ -1,4 +1,8 @@
 export default function StructuredData() {
+    const siteUrl =
+        process.env.NEXT_PUBLIC_SITE_URL ??
+        (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
     const structuredData = {
         "@context": "https://schema.org",
         "@graph": [
@@ -18,7 +22,7 @@ export default function StructuredData() {
                     "ratingCount": "1000"
                 },
                 "description": "Professional audio equalizer app for Android with 5 different equalizers, AutoEQ profiles for 1000+ headphones, multiband compressor, and advanced audio processing features.",
-                "screenshot": "https://x-Pepsy.github.io/tps-pages/screenshot.png",
+                "screenshot": new URL("/screenshot.png", siteUrl).toString(),
                 "downloadUrl": "https://play.google.com/store/apps/details?id=com.pepsy.theperfectsound",
                 "featureList": [
                     "TPS All-in-One Equalizer",
@@ -39,7 +43,7 @@ export default function StructuredData() {
             {
                 "@type": "WebSite",
                 "name": "The Perfect Sound",
-                "url": "https://x-Pepsy.github.io/tps-pages",
+                "url": siteUrl,
                 "description": "Official website for The Perfect Sound - Professional Audio Equalizer for Android",
                 "publisher": {
                     "@type": "Organization",

@@ -29,7 +29,7 @@ export default function PrivacyPolicyPage() {
                     <section>
                         <h2 className="text-2xl font-semibold mt-8 mb-4">1. DATA COLLECTION AND PROCESSING</h2>
                         <p>
-                            The Perfect Sound ("we", "our", "the app") is committed to protecting your privacy and complying with the General Data Protection Regulation (GDPR). This application does NOT collect, store, or process any personal data from users.
+                            The Perfect Sound (&quot;we&quot;, &quot;our&quot;, &quot;the app&quot;) is committed to protecting your privacy and complying with the General Data Protection Regulation (GDPR). This application does NOT collect, store, or process any personal data from users.
                         </p>
                     </section>
 
@@ -60,12 +60,12 @@ export default function PrivacyPolicyPage() {
 
                     <section>
                         <h2 className="text-2xl font-semibold mt-8 mb-4">4. PERMISSIONS USAGE</h2>
-                        <p>Our app requires certain permissions to function properly. Here's why each permission is necessary:</p>
+                        <p>Our app requires certain permissions to function properly. Here&apos;s why each permission is necessary:</p>
                         <ul className="list-disc pl-6 space-y-2">
                             <li><strong>INTERNET:</strong> Required to download pre-made AutoEQ profiles from our public repository (GitHub) and for Google Play Billing license verification. No personal data is transmitted during these operations.</li>
                             <li><strong>ACCESS_NETWORK_STATE:</strong> Used to check internet connectivity before attempting profile downloads and license verification.</li>
                             <li><strong>BLUETOOTH & BLUETOOTH_CONNECT:</strong> Necessary to detect connected Bluetooth audio devices (headphones, speakers) and automatically apply appropriate audio profiles.</li>
-                            <li><strong>MODIFY_AUDIO_SETTINGS:</strong> Essential for applying audio enhancements and equalizer settings to your device's audio system.</li>
+                            <li><strong>MODIFY_AUDIO_SETTINGS:</strong> Essential for applying audio enhancements and equalizer settings to your device&apos;s audio system.</li>
                             <li><strong>USB_PERMISSION:</strong> Required to detect and configure USB audio devices (DACs, USB headphones).</li>
                             <li><strong>FOREGROUND_SERVICE & FOREGROUND_SERVICE_MEDIA_PLAYBOOK:</strong> Allows the app to maintain audio processing in the background while you use other apps.</li>
                             <li><strong>POST_NOTIFICATIONS:</strong> Used to display service status notifications (Android 13+).</li>
@@ -108,16 +108,16 @@ export default function PrivacyPolicyPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-semibold mt-8 mb-4">8. CHILDREN'S PRIVACY</h2>
+                        <h2 className="text-2xl font-semibold mt-8 mb-4">8. CHILDREN&apos;S PRIVACY</h2>
                         <p>
-                            The Application is not used to knowingly solicit data from or market to children under the age of 13. Since we do not collect any personal information, there is no risk to children's privacy. In-app purchases require parental approval for accounts under 18.
+                            The Application is not used to knowingly solicit data from or market to children under the age of 13. Since we do not collect any personal information, there is no risk to children&apos;s privacy. In-app purchases require parental approval for accounts under 18.
                         </p>
                     </section>
 
                     <section>
                         <h2 className="text-2xl font-semibold mt-8 mb-4">9. SECURITY</h2>
                         <p>
-                            Since the Application does not collect any information, there is no risk of your data being accessed by unauthorized individuals. All settings are stored locally on your device. Premium license verification is handled securely through Google Play's encrypted APIs.
+                            Since the Application does not collect any information, there is no risk of your data being accessed by unauthorized individuals. All settings are stored locally on your device. Premium license verification is handled securely through Google Play&apos;s encrypted APIs.
                         </p>
                     </section>
 

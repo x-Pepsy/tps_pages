@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://x-Pepsy.github.io/tps-pages/sitemap.xml
+Sitemap: /sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 0
